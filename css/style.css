@@ -335,149 +335,99 @@ main {
    CV PAGE
    ========================================================= */
 
-.cv-layout {
-  display: grid;
-  grid-template-columns: 245px 1fr;
-  gap: 65px;
-  align-items: start;
+.cv-page {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 
-/* ---------- CV Sidebar ---------- */
+/* ---------- CV Header ---------- */
 
-.cv-sidebar {
-  position: sticky;
-  top: 110px;
+.cv-header {
+  padding-bottom: 30px;
+  margin-bottom: 45px;
+  border-bottom: 2px solid var(--heading);
 }
 
-.cv-photo {
-  width: 170px;
-  height: 170px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border: 6px solid white;
-  outline: 1px solid #dfe3e6;
-
-  margin-bottom: 20px;
-}
-
-.cv-sidebar h1 {
+.cv-header h1 {
   margin: 0 0 8px;
 
   color: var(--heading);
 
-  font-size: 25px;
-  line-height: 1.25;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
-
-.cv-role {
-  margin: 0 0 25px;
+.cv-header p {
+  margin: 0 0 15px;
 
   color: #687078;
 
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
 }
 
-
-.cv-contact {
-  padding-top: 20px;
-
-  border-top: 1px solid var(--border);
+.cv-header-separator {
+  margin: 0 8px;
+  color: #b5bbc0;
 }
 
-
-.cv-contact p {
-  margin: 0 0 18px;
-
+.cv-pdf-link {
   font-size: 14px;
-  line-height: 1.5;
+  font-weight: 600;
 }
 
 
-.cv-links {
-  margin-top: 25px;
-
-  padding-top: 20px;
-
-  border-top: 1px solid var(--border);
-}
-
-
-.cv-links p {
-  margin: 9px 0;
-
-  font-size: 15px;
-}
-
-
-.cv-download {
-  margin-top: 30px;
-}
-
-
-/* ---------- CV Main Content ---------- */
-
-.cv-content {
-  min-width: 0;
-}
-
+/* ---------- Sections ---------- */
 
 .cv-section {
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  padding-bottom: 42px;
+  margin-bottom: 42px;
 
   border-bottom: 1px solid var(--border);
 }
-
 
 .cv-section:last-child {
   border-bottom: none;
 }
 
-
 .cv-section > h2 {
-  margin: 0 0 25px;
+  margin: 0 0 28px;
 
   color: var(--heading);
 
-  font-size: 29px;
+  font-size: 27px;
   line-height: 1.3;
+  font-weight: 700;
 }
 
 
-/* ---------- CV Entries ---------- */
+/* ---------- Entries ---------- */
 
 .cv-entry {
   display: grid;
 
-  grid-template-columns: 145px 1fr;
+  grid-template-columns: 145px minmax(0, 1fr);
 
-  gap: 25px;
+  column-gap: 35px;
 
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
-
 
 .cv-entry:last-child {
   margin-bottom: 0;
 }
 
-
 .cv-date {
+  padding-top: 3px;
+
   color: #7a8288;
 
   font-family: Arial, Helvetica, sans-serif;
 
   font-size: 13px;
-
   line-height: 1.5;
 }
-
 
 .cv-entry-content h3 {
   margin: 0 0 7px;
@@ -485,103 +435,129 @@ main {
   color: var(--heading);
 
   font-size: 19px;
-
-  line-height: 1.4;
+  line-height: 1.45;
+  font-weight: 600;
 }
-
 
 .cv-entry-content p {
   margin: 5px 0;
 
-  font-size: 15px;
+  color: #5f676d;
 
+  font-size: 15px;
   line-height: 1.65;
 }
 
-
-/* ---------- Talks ---------- */
-
-.cv-list-item {
-  margin-bottom: 25px;
-}
-
-
-.cv-list-item:last-child {
-  margin-bottom: 0;
-}
-
-
-.cv-list-item strong {
-  color: var(--heading);
-
-  font-size: 17px;
-}
-
-
-.cv-list-item p {
-  margin: 5px 0 0;
-
-  font-size: 15px;
+.cv-detail {
+  color: #687078 !important;
 }
 
 
 /* ---------- Publications ---------- */
 
-.cv-publication {
-  margin-bottom: 30px;
-}
-
-
-.cv-publication p {
-  margin: 0;
-
-  font-size: 15px;
-
-  line-height: 1.7;
-}
-
-
-.publication-links {
-  margin-top: 8px !important;
-}
-
-
 .cv-contribution {
-  margin-top: 30px;
+  margin: -5px 0 32px;
 
-  padding: 16px 20px;
+  padding: 15px 19px;
 
   border-left: 3px solid var(--link);
 
   background: #f7f9fa;
 
-  color: #60686e;
+  color: #626a70;
 
   font-size: 14px;
-
   line-height: 1.65;
+}
+
+.cv-publication {
+  margin-bottom: 30px;
+}
+
+.cv-publication:last-child {
+  margin-bottom: 0;
+}
+
+.cv-publication p {
+  margin: 0;
+
+  color: #555e64;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cv-publication strong {
+  color: var(--heading);
+}
+
+.publication-links {
+  margin-top: 9px !important;
+
+  font-size: 14px !important;
+}
+
+
+/* ---------- Talks ---------- */
+
+.cv-talk {
+  margin-bottom: 27px;
+}
+
+.cv-talk:last-child {
+  margin-bottom: 0;
+}
+
+.cv-talk h3 {
+  margin: 0 0 5px;
+
+  color: var(--heading);
+
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.cv-talk p {
+  margin: 0;
+
+  color: #626a70;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* ---------- Achievements ---------- */
+
+.cv-bullets {
+  margin: 0;
+  padding-left: 22px;
+
+  color: #626a70;
+
+  font-size: 15px;
 }
 
 
 /* ---------- Courses ---------- */
 
-.cv-section h3 {
-  margin: 25px 0 12px;
+.cv-subheading {
+  margin: 25px 0 12px !important;
 
   color: var(--heading);
 
-  font-size: 18px;
+  font-size: 18px !important;
+  font-weight: 600;
 }
-
 
 .course-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 8px 30px;
+  gap: 8px 45px;
 }
-
 
 .course-grid span {
   position: relative;
@@ -591,16 +567,13 @@ main {
   color: #626a70;
 
   font-size: 14px;
-
-  line-height: 1.6;
+  line-height: 1.65;
 }
-
 
 .course-grid span::before {
   content: "•";
 
   position: absolute;
-
   left: 0;
 
   color: var(--link);
@@ -617,12 +590,10 @@ main {
   gap: 10px;
 }
 
-
 .skills span {
-  padding: 5px 12px;
+  padding: 5px 13px;
 
   border: 1px solid #dce1e5;
-
   border-radius: 3px;
 
   color: #626a70;
@@ -631,41 +602,34 @@ main {
 }
 
 
-/* ---------- CV Mobile ---------- */
+/* =========================================================
+   CV MOBILE
+   ========================================================= */
 
 @media (max-width: 800px) {
 
-  .cv-layout {
-    grid-template-columns: 1fr;
-    gap: 45px;
+  .cv-page {
+    max-width: 100%;
   }
 
-
-  .cv-sidebar {
-    position: static;
+  .cv-header h1 {
+    font-size: 35px;
   }
-
-
-  .cv-photo {
-    width: 150px;
-    height: 150px;
-  }
-
 
   .cv-entry {
     grid-template-columns: 1fr;
-    gap: 5px;
-    margin-bottom: 30px;
-  }
 
+    row-gap: 5px;
+  }
 
   .cv-date {
-    font-size: 13px;
+    padding-top: 0;
   }
-
 
   .course-grid {
     grid-template-columns: 1fr;
   }
 
 }
+
+
